@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Copyright 2026 Tu Nombre y colaboradores
+# SPDX-License-Identifier: GPL-2.0-only
+# Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo los términos
+# de la Licencia Pública General GNU como publicada por la Free Software Foundation,
+# ya sea la versión 2 de la Licencia, o (a tu elección) cualquier versión posterior.
+
+# Alex
+#21.04.2023 mod 17.04.2024
+#           mod 24.03.2026 - Se añade opción -d
+#           mod 28.04.2023 - Es mostren els processos en segón pla actius.
+
+#25.09.2024
+#Si no existe notify-send, hay que instalarlo en Debin/Ubuntu con:
+#sudo apt install libnotify-bin
+
+if [[ "$1" ==  "-d" ]]; then
+    #Opción desatendido.
+    segundoPlano $0
+    echo -e "\n    Ejecutado >$(basename $0)< en modo segundo plano. Puedes cerrar la terminal.\n"
+else
+    echo -e "\n\tPara ejecutar en segundo plano usar la opción '-d'"
+
+    echo -e "\n\tSegon plà: (el de PID menor)"
+    pgrep -af $(basename "$0")
+    echo
+
+    echo "Empieza el tiempo..."
+    notify-send 'Work Hard' 'Cada 15 minutos te recordaré que mires fuera' -i clock
+    while [ true ]
+    do
+        sleep 15m
+        notify-send 'Tiempooo' 'Mira fuera unos segundos' -i clock -t 60000
+    done
+fi
