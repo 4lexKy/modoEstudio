@@ -1,4 +1,4 @@
-[Versión 0.6.2]: #
+[Versión 0.7.2]: #
 # modoEstudio - Notificaciones periódicas para mirar lejos y mantener la salud de los ojos
 
 Se trata de un script que envia notificaciones mediante notify-send (libnotify-bin) cada 15 minutos para recordar mirar lejos unos segundos. Esto evitará la fatiga en los ojos, reducirá el dolor de cabeza y retrasará el deterioro natura de la vista con los años.
@@ -6,6 +6,12 @@ Se trata de un script que envia notificaciones mediante notify-send (libnotify-b
 ---
 ## Estado del proyecto
 Terminado, funciona correctamente.
+
+### Ficheros
+- modoEstudio: Fichero con código principal
+- LICENSE: contenido de la licencia
+- README.md: información del proyecto
+- .gitignore: define elementos a ignorar
 
 ---
 ## Instalación
@@ -40,7 +46,9 @@ Para un uso mas ágil se puede crear una carpeta para script de forma que todos 
 
 Esto se puede conseguir añadiendo a ~/.bashrc la línea:
 
->export PATH=$PATH:/ruta/a/carpeta/con/scripts
+```bash
+    export PATH=$PATH:/ruta/a/carpeta/con/scripts
+```
 
 ---
 ## Licencia
@@ -48,5 +56,8 @@ Este proyecto está licenciado bajo GPLv2 - consulta el archivo LICENSE para má
 
 ---
 ## Autor
->[Alex](github.com/4lexKy)
+>**Alex**
+- Github: [https://github.com/4lexKy](https://github.com/4lexKy)
+- Email: [alex.correu@pm.me](mailto:alex.correu@pm.me)
+
 ---
